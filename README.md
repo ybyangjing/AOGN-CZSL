@@ -77,7 +77,13 @@ where `LOG_DIR` is the directory containing the logs of a model.
 If you use this code in your research, please consider citing our paper:
 
 ```
-
+@inproceedings{naeem2021learning,
+  title={AOGN-CZSL: an Attributes and Objects Guided Network for Compositional Zero-Shot Learning},
+  author={Jing Yang, Xingjiang Ma, Yuankai Wu, Chengjiang Li, Zhidong Su, Ji Xu, Yixiong Feng},
+  booktitle={},
+  year={},
+  organization={}
+}
 ```
 
 **Note:** Our work is based on  [CZSL](https://github.com/ExplainableML/czsl).  If you find those parts useful, please consider citing:
