@@ -1,0 +1,43 @@
+---
+experiment:
+  name: aogn-czsl/clothing16k
+dataset:
+  data_dir: clothing
+  dataset: clothing
+  splitname: compositional-split-natural
+model_params:
+  model: AOGN
+  dropout: true
+  norm: true
+  relu: true
+  obj_fclayers: 2
+  obj_emb: [ 768,512 ]
+  attr_fclayers: 2
+  attr_emb: [ 768,512 ]
+  emb_dim: 300
+  emb_init: glove
+  image_extractor: ViT
+  train_only: true
+  open_world: false
+training:
+  batch_size: 128
+  eval_val_every: 1
+  load:
+  lr: 0.00002
+  wd: 5.0e-05
+  lrg: 5.0e-6
+  margin: 0.5
+  max_epochs: 150
+  norm_family: imagenet
+  save_every: 10000
+  test_batch_size: 32
+  test_set: val
+  topk: 1
+  workers: 8
+  update_features: true
+  freeze_features: false
+vit:
+  obj_nlayer: 6
+  attr_nlayer: 6
+  obj_nhead: 3
+  attr_nhead: 3
